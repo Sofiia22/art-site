@@ -1,0 +1,47 @@
+@import "./header.css";
+@import "./hero.css";
+@import "./modal.css";
+@import "./services.css";
+@import "./about.css";
+@import "./gallery.css";
+@import "./review.css";
+@import "./footer.css";
+
+:root {
+  --primary-color: #f68b1f;
+  --secondary-color: #1f2a37;
+  --text-color: #333333;
+  --white: #ffffff;
+  --gray-light: #f5f5f5;
+
+  --font-main: "Poppins", sans-serif;
+
+  --container-width: 1200px;
+  --section-padding: 60px;
+  --radius: 12px;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+  --header-bg: rgba(1, 20, 66, 0.7); /* #0F172A з прозорістю */
+  --header-bg-strong: rgba(0, 2, 5, 0.9);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  color: var(--text-color);
+  background-color: var(--white);
+  padding-top: 80px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* padding: 0 20px; 🔥 ключ */
+}
+html {
+  scroll-behavior: smooth;
+}

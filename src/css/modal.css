@@ -1,0 +1,97 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.6);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  width: 100%;
+  max-width: 560px;
+  padding: 32px;
+  border-radius: 24px;
+  background: #0f172a;
+  color: #fff;
+}
+
+.modal-form-wrap.is-hidden,
+.modal-success.is-hidden {
+  display: none;
+}
+
+.estimate-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  padding: 18px 20px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--white);
+  font-family: inherit;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.form-input {
+  min-height: 60px;
+}
+
+.form-textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: rgba(246, 139, 31, 0.8);
+  box-shadow: 0 0 0 4px rgba(246, 139, 31, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.required-mark {
+  color: var(--primary-color);
+  margin-left: 4px;
+}
+.form-submit-btn {
+  width: 100%;
+  min-height: 60px;
+
+  border-radius: 18px;
+  border: none;
+
+  background: var(--primary-color);
+  color: var(--white);
+
+  font-size: 18px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 12px 30px rgba(246, 139, 31, 0.25);
+  transition: 0.3s;
+}
+
+.form-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(246, 139, 31, 0.35);
+}
+.modal-success-lottie {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 20px;
+}

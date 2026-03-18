@@ -1,0 +1,168 @@
+.about {
+  padding: 100px 0;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+}
+
+/* Glass card */
+.about-card {
+  padding: 40px;
+  border-radius: 28px;
+
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* Header */
+.about-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.about-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  font-size: 22px;
+
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: #fff;
+}
+
+.about-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #0f172a;
+}
+
+.about-subtitle {
+  color: #64748b;
+  font-size: 16px;
+}
+
+/* Content */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.about-text p {
+  margin-bottom: 16px;
+}
+
+/* Image */
+.about-image {
+  flex: 1;
+  display: flex;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  max-height: 420px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Features */
+.about-features {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+
+  list-style: none;
+}
+
+.about-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.feature-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 14px;
+}
+.about-animate {
+  opacity: 0;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.about-fade-down {
+  transform: translateY(-40px);
+}
+
+.about-fade-left {
+  transform: translateX(-50px);
+}
+
+.about-fade-right {
+  transform: translateX(50px);
+}
+
+.about-fade-up {
+  transform: translateY(40px);
+}
+
+.about-animate.is-visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.about-title {
+  transition-delay: 0.1s;
+}
+
+.about-subtitle {
+  transition-delay: 0.2s;
+}
+
+.about-text {
+  transition-delay: 0.3s;
+}
+
+.about-image {
+  transition-delay: 0.4s;
+}
+
+.about-features {
+  transition-delay: 0.5s;
+}

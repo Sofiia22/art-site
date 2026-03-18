@@ -1,0 +1,172 @@
+.review {
+  padding: 110px 0;
+  background: #f5f6f8;
+}
+
+.review-header {
+  max-width: 760px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+.review-title {
+  margin: 0 0 16px;
+  font-size: 52px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.review-subtitle {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #475569;
+}
+
+.review-swiper {
+  overflow: visible;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+}
+
+.review-card {
+  min-height: 100%;
+}
+
+.review-stars {
+  margin-bottom: 28px;
+  font-size: 28px;
+  letter-spacing: 4px;
+  color: #0f172a;
+}
+
+.review-text {
+  margin: 0 0 28px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #1e293b;
+}
+
+.review-name {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.review-controls {
+  position: relative;
+  margin-top: 42px;
+}
+
+.review-pagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.review .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  margin: 0 !important;
+  background: rgba(15, 23, 42, 0.2);
+  opacity: 1;
+}
+
+.review .swiper-pagination-bullet-active {
+  background: #0f172a;
+}
+
+.review-arrows {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 16px;
+}
+
+.review-arrow {
+  width: 56px;
+  height: 56px;
+  border: 1px solid rgba(15, 23, 42, 0.15);
+  border-radius: 14px;
+  background: transparent;
+  color: #0f172a;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.review-arrow:hover,
+.review-arrow:focus {
+  background: rgba(246, 139, 31, 0.12);
+  border-color: rgba(246, 139, 31, 0.32);
+  color: #d97706;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 992px) {
+  .review-title {
+    font-size: 42px;
+  }
+
+  .review-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .review-text {
+    font-size: 17px;
+  }
+
+  .review-name {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .review {
+    padding: 80px 0;
+  }
+
+  .review-header {
+    margin-bottom: 40px;
+  }
+
+  .review-title {
+    font-size: 34px;
+  }
+
+  .review-subtitle {
+    font-size: 16px;
+  }
+
+  .review-text {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .review-controls {
+    margin-top: 32px;
+    flex-direction: column;
+    gap: 22px;
+    align-items: flex-start;
+  }
+
+  .review-arrow {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+}
