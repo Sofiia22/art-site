@@ -435,26 +435,29 @@ function initServices() {
 
 // ===== ABOUT =====
 function initAboutAnimation() {
-  const aboutAnimatedItems = document.querySelectorAll(".about-animate");
+  document.documentElement.classList.add("js");
 
-  if (!aboutAnimatedItems.length) return;
+  const aboutItems = document.querySelectorAll(".about-animate");
 
-  const aboutObserver = new IntersectionObserver(
-    (entries, observer) => {
+  if (!aboutItems.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
+          obs.unobserve(entry.target);
         }
       });
     },
     {
-      threshold: 0.2,
+      threshold: 0.15,
+      rootMargin: "0px 0px -40px 0px",
     },
   );
 
-  aboutAnimatedItems.forEach((item) => {
-    aboutObserver.observe(item);
+  aboutItems.forEach((item) => {
+    observer.observe(item);
   });
 }
 
