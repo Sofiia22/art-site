@@ -5,7 +5,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
   background: rgba(15, 23, 42, 0.6);
+  overflow-y: auto;
 }
 
 .backdrop.is-hidden {
@@ -15,12 +17,14 @@
 }
 
 .modal {
+  position: relative;
   width: 100%;
   max-width: 560px;
   padding: 32px;
   border-radius: 24px;
   background: #0f172a;
   color: #fff;
+  box-sizing: border-box;
 }
 
 .modal-form-wrap.is-hidden,
@@ -46,7 +50,9 @@
   font-size: 16px;
   outline: none;
   transition: all 0.3s ease;
+  box-sizing: border-box;
 }
+
 .form-input {
   min-height: 60px;
 }
@@ -64,34 +70,152 @@
 }
 
 .required-mark {
-  color: var(--primary-color);
   margin-left: 4px;
+  color: var(--primary-color);
 }
+
 .form-submit-btn {
   width: 100%;
   min-height: 60px;
-
-  border-radius: 18px;
   border: none;
-
+  border-radius: 18px;
   background: var(--primary-color);
   color: var(--white);
-
   font-size: 18px;
   font-weight: 600;
-
   cursor: pointer;
-
   box-shadow: 0 12px 30px rgba(246, 139, 31, 0.25);
-  transition: 0.3s;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .form-submit-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 16px 36px rgba(246, 139, 31, 0.35);
 }
+
 .modal-success-lottie {
   width: 160px;
   height: 160px;
   margin: 0 auto 20px;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .backdrop {
+    padding: 24px;
+  }
+
+  .modal {
+    max-width: 520px;
+    padding: 28px;
+    border-radius: 22px;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 16px 18px;
+  }
+
+  .form-input {
+    min-height: 56px;
+  }
+
+  .form-textarea {
+    min-height: 140px;
+  }
+
+  .form-submit-btn {
+    min-height: 56px;
+    font-size: 17px;
+  }
+
+  .modal-success-lottie {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .backdrop {
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .modal {
+    margin: 24px 0;
+    max-width: 100%;
+    padding: 24px 20px;
+    border-radius: 20px;
+  }
+
+  .estimate-form {
+    gap: 16px;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 15px 16px;
+    font-size: 15px;
+    border-radius: 16px;
+  }
+
+  .form-input {
+    min-height: 52px;
+  }
+
+  .form-textarea {
+    min-height: 120px;
+  }
+
+  .form-submit-btn {
+    min-height: 54px;
+    border-radius: 16px;
+    font-size: 16px;
+  }
+
+  .modal-success-lottie {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 16px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 479px) {
+  .backdrop {
+    padding: 12px;
+  }
+
+  .modal {
+    margin: 20px 0;
+    padding: 20px 16px;
+    border-radius: 18px;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 14px 14px;
+    font-size: 14px;
+  }
+
+  .form-input {
+    min-height: 50px;
+  }
+
+  .form-textarea {
+    min-height: 110px;
+  }
+
+  .form-submit-btn {
+    min-height: 52px;
+    font-size: 15px;
+  }
+
+  .modal-success-lottie {
+    width: 100px;
+    height: 100px;
+  }
 }
