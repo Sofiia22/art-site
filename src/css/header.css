@@ -21,11 +21,15 @@
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
+/* ===== CONTAINER ===== */
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* ===== LOGO ===== */
@@ -122,10 +126,9 @@
 
   background: linear-gradient(
     to bottom,
-    rgba(15, 23, 42, 0.98),
-    rgba(30, 41, 59, 0.98)
+    rgba(15, 23, 42, 0.96),
+    rgba(30, 41, 59, 0.94)
   );
-
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 
@@ -152,9 +155,14 @@
   padding: 120px 24px 40px;
 
   text-align: center;
+  background: linear-gradient(
+    to right,
+    rgba(15, 23, 42, 0.96),
+    rgba(30, 41, 59, 0.94)
+  );
 }
 
-/* ===== NAV (MOBILE) ===== */
+/* ===== MOBILE NAV ===== */
 .mobile-menu-list {
   display: flex;
   flex-direction: column;
@@ -199,7 +207,7 @@
   transform: translateY(-2px);
 }
 
-/* ===== CONTACTS MOBILE ===== */
+/* ===== MOBILE CONTACTS ===== */
 .mobile-contacts {
   display: flex;
   flex-direction: column;
@@ -269,6 +277,10 @@
 }
 
 /* ===== CONTACT DESKTOP ===== */
+.header-contact {
+  display: none;
+}
+
 .contact-item {
   display: flex;
   align-items: center;
@@ -291,15 +303,21 @@
   fill: currentColor;
 }
 
-/* ===== 375+ ===== */
-@media (min-width: 375px) {
-  .mobile-menu-content {
-    padding: 128px 28px 44px;
+/* ===== SMALL MOBILE ===== */
+@media (max-width: 479px) {
+  .header-container {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
 /* ===== TABLET ===== */
 @media (min-width: 768px) {
+  .header-container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
   .burger,
   .mobile-menu {
     display: none;
