@@ -330,6 +330,17 @@ function initModal() {
         message: formData.get("message")?.toString().trim(),
       };
 
+      const submitBtn = form.querySelector(".form-submit-btn");
+      const btnText = submitBtn?.querySelector(".btn-text");
+
+      if (submitBtn) {
+        submitBtn.classList.add("loading");
+      }
+
+      if (btnText) {
+        btnText.textContent = "Sending...";
+      }
+
       try {
         const response = await fetch(
           "https://profound-platypus-9ee14f.netlify.app/.netlify/functions/send-telegram",
@@ -346,6 +357,14 @@ function initModal() {
 
         if (!response.ok || !data.ok) {
           throw new Error(data.error || "Failed to send request");
+        }
+
+        if (submitBtn) {
+          submitBtn.classList.remove("loading");
+        }
+
+        if (btnText) {
+          btnText.textContent = "Send";
         }
 
         if (formWrap && successMessage) {
@@ -375,12 +394,21 @@ function initModal() {
           closeModal();
         }, 3000);
       } catch (error) {
+        if (submitBtn) {
+          submitBtn.classList.remove("loading");
+        }
+
+        if (btnText) {
+          btnText.textContent = "Send";
+        }
+
         console.error("Form submit error:", error);
         alert("Something went wrong. Please try again.");
       }
     });
   }
 }
+
 // ===== ACTIVE NAV =====
 function initActiveNav() {
   const sections = document.querySelectorAll(
