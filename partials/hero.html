@@ -1,0 +1,84 @@
+<section class="hero" id="hero">
+  <div class="container hero-container">
+    <div class="hero-content">
+      <h1 class="hero-title">Professional Painting and Remodeling</h1>
+      <p class="hero-text">Transforming houses into homes</p>
+
+      <button type="button" class="hero-btn" data-modal-open>
+        Get Free Estimate
+      </button>
+    </div>
+  </div>
+</section>
+
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button
+      type="button"
+      class="modal-close"
+      data-modal-close
+      aria-label="Close"
+    >
+      <svg class="modal-close-icon">
+        <use href="/art-site/img/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+
+    <div class="modal-form-wrap" data-modal-form-wrap>
+      <h2 class="modal-title">Get Free Estimate</h2>
+
+      <p class="modal-note">
+        <span class="required-mark">*</span> Required fields
+      </p>
+
+      <form class="estimate-form" data-estimate-form>
+        <label class="form-label">
+          <span class="form-label-text">
+            Name <span class="required-mark">*</span>
+          </span>
+          <input
+            class="form-input"
+            type="text"
+            name="name"
+            placeholder="Your name"
+            required
+          />
+        </label>
+
+        <label class="form-label">
+          <span class="form-label-text">
+            Phone <span class="required-mark">*</span>
+          </span>
+          <input
+            class="form-input"
+            type="tel"
+            name="phone"
+            placeholder="Your phone number"
+            required
+          />
+        </label>
+
+        <label class="form-label">
+          <span class="form-label-text">Message</span>
+          <textarea
+            class="form-textarea"
+            name="message"
+            placeholder="Tell us about your project"
+            rows="6"
+          ></textarea>
+        </label>
+
+        <button type="submit" class="form-submit-btn">
+          <span class="btn-text">Send</span>
+          <span class="btn-loader"></span>
+        </button>
+      </form>
+    </div>
+
+    <div class="modal-success is-hidden" data-modal-success>
+      <div id="lottie-success" class="modal-success-lottie"></div>
+      <h2 class="modal-title">Thank you!</h2>
+      <p class="modal-subtitle">Your request has been sent successfully.</p>
+    </div>
+  </div>
+</div>
