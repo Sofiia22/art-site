@@ -7,9 +7,11 @@
     "dev": "vite",
     "build": "vite build",
     "build:github": "vite build --mode github",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build:github && gh-pages -d dist"
   },
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "vite": "^8.0.0"
   }
 }
