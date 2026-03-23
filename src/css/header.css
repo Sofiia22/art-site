@@ -152,7 +152,7 @@
 
   height: 100%;
   width: 100%;
-  min-height: 0;
+  /* min-height: 0; */
 
   padding: 120px 24px calc(40px + env(safe-area-inset-bottom));
 
