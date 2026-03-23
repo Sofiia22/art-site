@@ -48,9 +48,14 @@ function initMobileMenu() {
   function openMenu() {
     burger.classList.add("is-open");
     mobileMenu.classList.add("active");
-    document.body.style.overflow = "hidden"; // 🔥
+    document.body.classList.add("no-scroll"); // ✅
   }
 
+  function closeMenu() {
+    burger.classList.remove("is-open");
+    mobileMenu.classList.remove("active");
+    document.body.classList.remove("no-scroll"); // ✅
+  }
   function closeMenu() {
     burger.classList.remove("is-open");
     mobileMenu.classList.remove("active");
