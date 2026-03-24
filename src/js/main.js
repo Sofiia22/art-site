@@ -348,16 +348,13 @@ function initModal() {
       }
 
       try {
-        const response = await fetch(
-          "arttime-llc.netlify.app/.netlify/functions/send-telegram",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(payload),
+        const response = await fetch("/.netlify/functions/send-telegram", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
           },
-        );
+          body: JSON.stringify(payload),
+        });
 
         const data = await response.json();
 

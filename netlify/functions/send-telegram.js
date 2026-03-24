@@ -1,6 +1,6 @@
 export async function handler(event) {
   const headers = {
-    "Access-Control-Allow-Origin": "https://sofiia22.github.io",
+    "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Headers": "Content-Type",
     "Access-Control-Allow-Methods": "POST, OPTIONS",
     "Content-Type": "application/json",
@@ -91,7 +91,10 @@ export async function handler(event) {
     return {
       statusCode: 500,
       headers,
-      body: JSON.stringify({ error: "Unexpected server error" }),
+      body: JSON.stringify({
+        error: "Unexpected server error",
+        details: error.message,
+      }),
     };
   }
 }
