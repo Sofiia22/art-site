@@ -349,7 +349,7 @@ function initModal() {
 
       try {
         const response = await fetch(
-          "https://profound-platypus-9ee14f.netlify.app/.netlify/functions/send-telegram",
+          "arttime-llc.netlify.app/.netlify/functions/send-telegram",
           {
             method: "POST",
             headers: {
