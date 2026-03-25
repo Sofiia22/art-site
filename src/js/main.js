@@ -351,7 +351,10 @@ function initModal() {
 
         const container = document.getElementById("lottie-success");
 
-        if (container && typeof lottie !== "undefined") {
+        if (container) {
+          const lottieModule = await import("lottie-web");
+          const lottie = lottieModule.default;
+
           if (!lottieInstance) {
             lottieInstance = lottie.loadAnimation({
               container,
