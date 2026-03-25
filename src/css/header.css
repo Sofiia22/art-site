@@ -423,8 +423,3 @@
     font-size: 14px;
   }
 }
-
-.hero {
-  margin-top: -80px; /* приблизна висота header */
-  padding-top: 160px; /* щоб контент не заліз */
-}
