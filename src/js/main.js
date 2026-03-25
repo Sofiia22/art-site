@@ -49,19 +49,17 @@ function initMobileMenu() {
   function openMenu() {
     burger.classList.add("is-open");
     mobileMenu.classList.add("active");
-    document.body.classList.add("no-scroll"); // ✅
+    burger.setAttribute("aria-expanded", "true");
+    document.body.classList.add("no-scroll");
   }
 
   function closeMenu() {
     burger.classList.remove("is-open");
     mobileMenu.classList.remove("active");
-    document.body.classList.remove("no-scroll"); // ✅
+    burger.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("no-scroll");
   }
-  function closeMenu() {
-    burger.classList.remove("is-open");
-    mobileMenu.classList.remove("active");
-    document.body.style.overflow = ""; // 🔥
-  }
+
   burger.addEventListener("click", () => {
     const isOpen = burger.classList.contains("is-open");
     isOpen ? closeMenu() : openMenu();
